@@ -440,7 +440,9 @@ function App() {
                   rel="noopener noreferrer"
                   aria-label="Message Leads Vault Solutions on WhatsApp"
                 >
-                  <span className="whatsapp-mark" aria-hidden="true">☎</span>
+                  <span className="whatsapp-mark" aria-hidden="true">
+                    <img src="https://cdn.simpleicons.org/whatsapp/ffffff" alt="" />
+                  </span>
                   <span>
                     <strong>Message us on WhatsApp</strong>
                     <small>+20 12 29098083</small>
