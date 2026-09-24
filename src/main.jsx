@@ -276,6 +276,44 @@ function LeadForm() {
   );
 }
 
+function BenefitCards() {
+  const benefits = [
+    ["🔥", "Fresh Leads", "Recently generated opportunities from homeowners looking to sell."],
+    ["✅", "Verified Leads", "Seller information reviewed before delivery."],
+    ["🔒", "Exclusive Leads", "Leads can be reserved exclusively for your market."],
+    ["⚡", "Quick-Sale Leads", "Homeowners with a shorter selling timeline."],
+  ];
+  return <section className="benefits-section" id="benefits"><div className="section-tag">01 / What you get</div><h2>Better leads.<br /><i>Better conversations.</i></h2><div className="benefit-grid">{benefits.map(([icon, title, copy]) => <article className="benefit-card" key={title}><span className="benefit-icon" aria-hidden="true">{icon}</span><h3>{title}</h3><p>{copy}</p></article>)}</div></section>;
+}
+
+function SampleLead() {
+  return <section className="sample-section" id="sample-lead"><div className="sample-copy"><div className="section-tag">02 / See the opportunity</div><h2>Know what you’re<br /><i>buying into.</i></h2><p>Every opportunity starts with useful context. Here is the kind of seller detail your team can act on.</p><a className="button button-light" href="#contact">Get similar leads <span>↗</span></a></div><article className="sample-lead-card"><div className="sample-card-top"><span>Sample seller lead</span><span className="lead-status">Owner verified ✓</span></div><div className="seller-heading"><div><h3>John M.</h3><p>📍 Tampa, FL</p></div><span className="motivation-badge">🔥 High motivation</span></div><div className="lead-details"><p><span>Property</span><strong>Single Family</strong></p><p><span>Estimated value</span><strong>$285,000</strong></p><p><span>Asking price</span><strong>$210,000</strong></p><p><span>Motivation</span><strong>Relocating</strong></p><p><span>Timeline</span><strong>ASAP</strong></p><p><span>Condition</span><strong>Needs repairs</strong></p><p><span>Phone</span><strong>Available</strong></p></div></article></section>;
+}
+
+function CoverageProof() {
+  return <section className="coverage-section" id="coverage"><div><div className="section-tag">03 / Nationwide coverage</div><h2>Local markets.<br /><i>National reach.</i></h2><p>Choose the states, cities, counties, or ZIP codes where you want to buy. We help you build a pipeline that travels with your strategy.</p></div><NationMap /></section>;
+}
+
+function HowItWorks() {
+  const steps = [["01", "Choose Your Market", "Select your states, cities, counties or ZIP codes."], ["02", "We Find & Verify Sellers", "Our team identifies potential opportunities and verifies seller information."], ["03", "Receive Your Leads", "Get the lead details and follow up directly with the seller."]];
+  return <section className="process-section" id="how-it-works"><div className="section-tag">04 / How it works</div><div className="process-heading"><h2>A simple path to<br /><i>your next deal.</i></h2><p>Tell us where you buy. We’ll help you focus on the homeowners most likely to be ready.</p></div><div className="process-steps">{steps.map(([number, title, copy], index) => <div className="process-step" key={number}><span>{number}</span><div><h3>{title}</h3><p>{copy}</p></div>{index < steps.length - 1 && <b aria-hidden="true">↓</b>}</div>)}</div></section>;
+}
+
+function InvestorTypes() {
+  const types = [["🏠", "Wholesalers"], ["🔨", "Fix & Flip Investors"], ["💰", "Buy & Hold Investors"], ["🏢", "Real Estate Investment Companies"]];
+  return <section className="investor-section" id="investors"><div className="section-tag">05 / Built for investors</div><div className="investor-layout"><div><h2>Built for<br /><i>real estate investors.</i></h2><p>Whether you’re buying one property or building a nationwide acquisition pipeline, we help you connect with homeowners who may be ready to sell.</p></div><div className="investor-types">{types.map(([icon, title]) => <div key={title}><span aria-hidden="true">{icon}</span><strong>{title}</strong><b>↗</b></div>)}</div></div></section>;
+}
+
+function Pricing() {
+  const plans = [["Starter", "For investors testing a new market", "Request pricing"], ["Growth", "For active investors needing consistent lead flow", "Request pricing"], ["Custom", "Custom markets & lead volume", "Talk to sales"]];
+  return <section className="pricing-section" id="pricing"><div className="section-tag">06 / Lead plans</div><div className="pricing-heading"><h2>Choose your<br /><i>lead plan.</i></h2><p>Start with the market and volume that fits your acquisition strategy.</p></div><div className="pricing-grid">{plans.map(([title, copy, action], index) => <article className={`pricing-card ${index === 1 ? "featured" : ""}`} key={title}><span className="plan-name">{title}</span><p>{copy}</p><a href="#contact">{action} <span>↗</span></a></article>)}</div><p className="pricing-note">Pay only for the leads you receive.</p></section>;
+}
+
+function WhyUs() {
+  const points = ["Nationwide U.S. Coverage", "Fresh Seller Opportunities", "Lead Verification", "Exclusive Lead Options", "Detailed Seller Information", "Fast Lead Delivery", "Investor-Focused Support"];
+  return <section className="why-section" id="why-us"><div className="section-tag">07 / Why Leads Vault Solutions</div><div className="why-layout"><h2>The details that<br /><i>move deals forward.</i></h2><div className="why-list">{points.map((point) => <div key={point}><span>✓</span><strong>{point}</strong></div>)}</div></div></section>;
+}
+
 function App() {
   const [readyMode, setReadyMode] = useState(false);
   return (
@@ -285,119 +323,53 @@ function App() {
         <Logo />
         <nav aria-label="Primary navigation">
           <a href="#top">Home</a>
-          <a href="#how-it-works">Nationwide</a>
-          <a href="#opportunities">Lead opportunities</a>
-          <a href="#crm">CRM thinking</a>
+          <a href="#benefits">What you get</a>
+          <a href="#sample-lead">Sample lead</a>
+          <a href="#coverage">Nationwide</a>
+          <a href="#how-it-works">How it works</a>
           <a href="#contact">Contact</a>
         </nav>
         <a className="header-cta" href="#contact">
-          Get started <span>↗</span>
+          Get your leads <span>↗</span>
         </a>
       </header>
       <main id="main-content">
         <section className="hero">
           <div className="hero-copy">
-            <span className="eyebrow">Motivated leads · built for action</span>
+            <span className="eyebrow">Nationwide seller opportunities</span>
             <h1>
-              Ready when
+              Motivated seller
               <br />
-              <i>opportunity</i> calls.
+              <i>leads.</i>
             </h1>
             <p className="hero-text">
-              Leads Vault Solutions gives real estate professionals the context,
-              coverage, and confidence to make the next call count.
+              Find homeowners ready to sell. Exclusive, verified seller opportunities delivered directly to real estate investors across the U.S.
             </p>
             <div className="hero-actions">
               <a className="button button-dark" href="#contact">
-                Talk to our team <span>↗</span>
+                Get your leads <span>↗</span>
               </a>
-              <a className="text-link" href="#opportunities">
-                See lead opportunities <span>↓</span>
+              <a className="text-link" href="#how-it-works">
+                See how it works <span>↓</span>
               </a>
             </div>
             <div className="hero-proof">
-              <span>
-                <b>01</b> Clear lead context
-              </span>
-              <span>
-                <b>02</b> Nationwide reach
-              </span>
+              <span>Fresh Leads</span><span>Verified Sellers</span><span>Exclusive Opportunities</span><span>Nationwide</span>
             </div>
           </div>
           <div className="hero-visual">
             <Dashboard readyMode={readyMode} setReadyMode={setReadyMode} />
           </div>
         </section>
-        <section className="map-section" id="how-it-works">
-          <div className="section-tag">01 / The reach</div>
-          <div className="map-layout">
-            <div>
-              <h2>
-                Local signals.
-                <br />
-                <i>Nationwide</i> momentum.
-              </h2>
-              <p>
-                From a single neighborhood to your next market, we help you see
-                where the opportunity is and what to do with it.
-              </p>
-              <a className="text-link dark-link" href="#contact">
-                Explore your market <span>↗</span>
-              </a>
-            </div>
-            <NationMap />
-          </div>
-        </section>
-        <PropertyShowcase />
-        <section className="crm-section" id="crm">
-          <div className="section-tag">03 / The system</div>
-          <div className="crm-layout">
-            <div>
-              <img
-                className="section-image crm-image"
-                src="https://images.unsplash.com/photo-1497366811353-6870744d04b2?auto=format&fit=crop&w=1800&q=90"
-                alt="Bright real estate team workspace"
-              />
-              <h2>
-                Not just a name
-                <br />
-                in a spreadsheet.
-              </h2>
-              <p>
-                Think of it as your front door to a better CRM: organized
-                details, clear next steps, and a team that understands the
-                handoff.
-              </p>
-            </div>
-            <div className="feature-list">
-              <div>
-                <span>01</span>
-                <strong>Capture the full story</strong>
-                <p>
-                  Know the reason, timing, and market before you ever pick up
-                  the phone.
-                </p>
-              </div>
-              <div>
-                <span>02</span>
-                <strong>Keep your pipeline moving</strong>
-                <p>
-                  Turn promising conversations into a repeatable process your
-                  team can own.
-                </p>
-              </div>
-              <div>
-                <span>03</span>
-                <strong>Stay ready</strong>
-                <p>
-                  When the right lead lands, you already know your next move.
-                </p>
-              </div>
-            </div>
-          </div>
-        </section>
+        <BenefitCards />
+        <SampleLead />
+        <CoverageProof />
+        <HowItWorks />
+        <InvestorTypes />
+        <Pricing />
+        <WhyUs />
         <section className="contact-section" id="contact">
-          <div className="section-tag">04 / Make a connection</div>
+          <div className="section-tag">08 / Ready to find your next deal?</div>
           <div className="contact-layout">
             <div>
               <img
@@ -406,13 +378,12 @@ function App() {
                 alt="Inviting home exterior"
               />
               <h2>
-                Tell us what
+                Ready to find
                 <br />
-                <i>ready</i> looks like.
+                <i>your next deal?</i>
               </h2>
               <p>
-                Markets, lead volume, CRM support, or all three. Give us the
-                useful version and we’ll take it from there.
+                Tell us where you buy and what type of sellers you’re looking for.
               </p>
               <div className="contact-aside">
                 <span>Prefer email?</span>
@@ -457,7 +428,7 @@ function App() {
       </main>
       <footer>
         <Logo />
-        <span>Motivated leads for real estate professionals</span>
+        <span>Motivated seller leads for real estate investors</span>
         <span>© 2026 Leads Vault Solutions</span>
       </footer>
     </div>
