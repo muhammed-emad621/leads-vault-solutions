@@ -1,6 +1,8 @@
 import { StrictMode, useState } from "react";
 import { createRoot } from "react-dom/client";
 import "./styles.css";
+import logoImage from "../assets/logo.png";
+import mapImage from "../assets/map.png";
 
 const formEndpoint = import.meta.env.VITE_FORM_ENDPOINT?.trim();
 
@@ -8,7 +10,7 @@ function Logo() {
   return (
     <a className="logo" href="#top" aria-label="Leads Vault Solutions home">
       <span className="logo-mark">
-        <img src="/assets/logo.png" alt="Leads Vault Solutions logo" />
+        <img src={logoImage} alt="Leads Vault Solutions logo" />
       </span>
       <span>
         Leads Vault <em>Solutions</em>
@@ -26,7 +28,7 @@ function NationMap() {
       </div>
       <img
         className="map-image"
-        src="/assets/map.png"
+        src={mapImage}
         alt="Hand-drawn map of the United States showing nationwide coverage"
       />
       <div className="map-footer">
