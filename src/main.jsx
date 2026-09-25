@@ -336,14 +336,14 @@ function App() {
       <main id="main-content">
         <section className="hero">
           <div className="hero-copy">
-            <span className="eyebrow">Nationwide seller opportunities</span>
+            <span className="eyebrow">Motivated seller leads</span>
             <h1>
-              Motivated seller
+              Find homeowners
               <br />
-              <i>leads.</i>
+              <i>ready to sell.</i>
             </h1>
             <p className="hero-text">
-              Find homeowners ready to sell. Exclusive, verified seller opportunities delivered directly to real estate investors across the U.S.
+              Exclusive, verified seller opportunities delivered directly to real estate investors across the U.S.
             </p>
             <div className="hero-actions">
               <a className="button button-dark" href="#contact">
