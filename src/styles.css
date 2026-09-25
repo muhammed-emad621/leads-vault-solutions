@@ -34,7 +34,7 @@ nav a:hover, .text-link:hover { color: var(--coral); }
 .hero .eyebrow { color: #d9eceb; }
 .eyebrow::before { content: ''; display: inline-block; width: 7px; height: 7px; margin: 0 9px 1px 0; background: var(--coral); border-radius: 50%; }
 h1, h2 { font-family: 'Space Grotesk', sans-serif; letter-spacing: -.075em; line-height: .96; margin: 0; }
-h1 { max-width: 620px; margin: 23px 0 24px; font-size: clamp(4.3rem, 7vw, 7.8rem); }
+h1 { max-width: 620px; margin: 23px 0 24px; font-size: clamp(4.3rem, 7vw, 5.25rem); }
 h1 i, h2 i { color: var(--coral); font-family: var(--serif); font-weight: 400; letter-spacing: -.08em; }
 .hero-text, .map-layout p, .crm-layout p, .contact-layout p { max-width: 470px; margin: 0; color: var(--muted); line-height: 1.7; font-size: 1.02rem; }.hero-text { color: rgba(248,245,238,.78); }
 .hero-actions { display: flex; align-items: center; flex-wrap: wrap; gap: 25px; margin-top: 32px; }
